@@ -1,4 +1,5 @@
 <template>
+	<!-- FIXME: Suspense -->
 	<Suspense>
 		<template #default>
 			<router-view class="page-wrapper" />
