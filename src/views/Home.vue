@@ -23,13 +23,10 @@ export default {
 		this.fetchPeople();
 	},
 	methods: {
-		/* async */ fetchPeople() {
-			// const { results } = /* await */ getData(peopleEndpoint);
-			const siema = /* await */ getData(peopleEndpoint);
+		async fetchPeople() {
+			const { results } = await getData(peopleEndpoint);
 
-			console.log(siema);
-
-			this.$store.dispatch('setPeople', siema.results);
+			this.$store.dispatch('setPeople', results);
 
 			// TODO: error handling
 		},

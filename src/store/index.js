@@ -15,8 +15,8 @@ export default createStore({
 				state.people.map(
 					({ name, height, mass, created, edited, homeworld }) => ({
 						name,
-						height,
-						mass,
+						height: parseInt(height, 10),
+						mass: parseInt(mass, 10),
 						created: new Date(created),
 						edited: new Date(edited),
 						planet: homeworld,
@@ -44,5 +44,4 @@ export default createStore({
 			commit(types.SET_PEOPLE, sortedPeople);
 		},
 	},
-	modules: {},
 });
